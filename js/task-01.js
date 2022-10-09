@@ -10,9 +10,9 @@ console.log(`Number of categories:`, categoriesEl.length);
 //категории (всех вложенных в него <li>).
 
 categoriesEl.forEach((element) => {
-    const titleItemEl = element.querySelector('h2').textContent;
-    const firstElementUnderThisName = element.querySelectorAll('li');
+    //const titleItemEl = element.querySelector('h2').textContent;
+    //const firstElementUnderThisName = element.querySelectorAll('li');
 
-    console.log('Category:', titleItemEl);
-    console.log('Elements:', firstElementUnderThisName.length);
+    console.log(`Category: ${element.firstElementChild.textContent}`);
+    console.log(`Elements: ${element.lastElementChild.children.length}`);
     });
